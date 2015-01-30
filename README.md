@@ -8,3 +8,4 @@ CS495 - Beats by Dr. J
 ## Assignments ##
 * 50's Chord Progression
 
+![octocat](https://octodex.github.com/images/daftpunktocat-thomas.gif)
