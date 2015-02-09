@@ -31,4 +31,4 @@ rraidentity : rraidentity.c
 .PHONY : clean
 
 clean :
-		rm -f $(RRA) $(SRRA) mix.rra
+		rm -f $(RRA) $(SRRA) mix.rra *.x
