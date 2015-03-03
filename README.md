@@ -1,5 +1,5 @@
 # Joshua Wolfe #
-University of Alabama
+The University of Alabama
 <br />CS495 - Beats by Dr. J
 
 ## Installation Instructions ##
