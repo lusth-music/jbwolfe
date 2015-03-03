@@ -39,3 +39,9 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Audacity Project Files #
+##########################
+*.aup
+*_data
+Queen_*
