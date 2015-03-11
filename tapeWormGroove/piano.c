@@ -21,11 +21,10 @@
 char *PROGRAM_NAME = "piano";
 char *PROGRAM_VERSION = "0.01";
 
-int
-main()
-    {
+int main() {
     int instrument;
     int octave = 4;
+    int riftCnt;
 
     songInit();
 
@@ -42,7 +41,9 @@ main()
     setKey(C);
     setMode(IONIAN);
 
-goto here;
+    riftCnt = 0;
+
+goto rift1;
     /* A 50's Progression */
     c(1,H,instrument,octave);
     c(6,H,instrument,octave-1);
@@ -52,10 +53,10 @@ goto here;
     cpower(1, H, instrument, octave);
     cpower2(1, H, instrument, octave);
 
-here:;
+rift1:;
     rest(W);
     int i;
-    for(i=0;i<2;++i){
+    for(i=0; i<2; ++i) {
       //b(1, Q, instrument, octave,   "xxx", SX);
       cpower2(1, I, instrument, octave);
       cpower2(1, I, instrument, octave);
@@ -88,35 +89,46 @@ here:;
       b(5, Q, instrument, octave, "x--", SX);
       b(5, Q, instrument, octave, "x--", SX);
     }
+    goto rift2;
 
+rift2:;
     cchord(4, Q, instrument, octave-1, "xxx");
-    cchord(4, I, instrument, octave-1, "x--");
-    cchord(4, I, instrument, octave-1, "-x-");
-    cchord(4, Q, instrument, octave-1, "--x");
+    cchord(4, I, instrument, octave,   "x--");
+    cchord(4, I, instrument, octave,   "-x-");
+    cchord(4, Q, instrument, octave,   "--x");
     cchord(5, Q, instrument, octave-1, "xxx");
-    cchord(5, I, instrument, octave-1, "x--");
-    cchord(5, I, instrument, octave-1, "-x-");
-    cchord(5, Q, instrument, octave-1, "--x");
+    cchord(5, I, instrument, octave,   "x--");
+    cchord(5, I, instrument, octave,   "-x-");
+    cchord(5, Q, instrument, octave,   "--x");
     cchord(6, Q, instrument, octave-1, "xxx");
-    cchord(6, I, instrument, octave-1, "x--");
-    cchord(6, I, instrument, octave-1, "-x-");
-    cchord(6, Q, instrument, octave-1, "--x");
+    cchord(6, I, instrument, octave,   "x--");
+    cchord(6, I, instrument, octave,   "-x-");
+    cchord(6, Q, instrument, octave,   "--x");
     cchord(1, Q, instrument, octave,   "xxx");
-    cchord(1, I, instrument, octave,   "x--");
-    cchord(1, I, instrument, octave,   "-x-");
-    cchord(1, Q, instrument, octave,   "--x");
+    cchord(1, I, instrument, octave+1, "x--");
+    cchord(1, I, instrument, octave+1, "-x-");
+    cchord(1, Q, instrument, octave+1, "--x");
     cchord(6, Q, instrument, octave-1, "xxx");
-    cchord(6, I, instrument, octave-1, "--x");
-    cchord(6, I, instrument, octave-1, "-x-");
-    cchord(6, Q, instrument, octave-1, "x--");
+    cchord(6, I, instrument, octave,   "--x");
+    cchord(6, I, instrument, octave,   "-x-");
+    cchord(6, Q, instrument, octave,   "x--");
     cchord(5, Q, instrument, octave-1, "xxx");
-    cchord(5, I, instrument, octave-1, "--x");
-    cchord(5, I, instrument, octave-1, "-x-");
-    cchord(5, Q, instrument, octave-1, "x--");
+    cchord(5, I, instrument, octave,   "--x");
+    cchord(5, I, instrument, octave,   "-x-");
+    cchord(5, Q, instrument, octave,   "x--");
     cchord(4, Q, instrument, octave-1, "xxx");
-    cchord(4, I, instrument, octave-1, "--x");
-    cchord(4, I, instrument, octave-1, "-x-");
-    cchord(4, Q, instrument, octave-1, "x--");
+    cchord(4, I, instrument, octave,   "--x");
+    cchord(4, I, instrument, octave,   "-x-");
+    cchord(4, Q, instrument, octave,   "x--");
+
+    ++riftCnt;
+    if(riftCnt == 2) {
+      goto end;
+    } else if(riftCnt < 2) {
+      goto rift1;
+    }
+
+end:;
     cpower(1, W, instrument, octave);
 
     closeOutput();

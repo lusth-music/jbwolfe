@@ -16,6 +16,9 @@ all : $(RRA)
 mix		: $(RRA)
 		rrafastmixer -a0.5 $(RRA) | rplay
 
+mixstereo	: $(RRA)
+		rrafastmixer -a0.5 $(RRA) | rplay
+
 mix.rra		: $(RRA)
 		rrafastmixer -a0.5 $(RRA) > mix.rra
 
