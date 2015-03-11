@@ -92,34 +92,35 @@ rift1:;
     goto rift2;
 
 rift2:;
-    cchord(4, Q, instrument, octave-1, "xxx");
-    cchord(4, I, instrument, octave-1, "x--");
-    cchord(4, I, instrument, octave-1, "-x-");
-    cchord(4, Q, instrument, octave-1, "--x");
-    cchord(5, Q, instrument, octave-1, "xxx");
-    cchord(5, I, instrument, octave-1, "x--");
-    cchord(5, I, instrument, octave-1, "-x-");
-    cchord(5, Q, instrument, octave-1, "--x");
-    cchord(6, Q, instrument, octave-1, "xxx");
-    cchord(6, I, instrument, octave-1, "x--");
-    cchord(6, I, instrument, octave-1, "-x-");
-    cchord(6, Q, instrument, octave-1, "--x");
-    cchord(1, Q, instrument, octave,   "xxx");
-    cchord(1, I, instrument, octave,   "x--");
-    cchord(1, I, instrument, octave,   "-x-");
-    cchord(1, Q, instrument, octave,   "--x");
-    cchord(6, Q, instrument, octave-1, "xxx");
-    cchord(6, I, instrument, octave-1, "--x");
-    cchord(6, I, instrument, octave-1, "-x-");
-    cchord(6, Q, instrument, octave-1, "x--");
-    cchord(5, Q, instrument, octave-1, "xxx");
-    cchord(5, I, instrument, octave-1, "--x");
-    cchord(5, I, instrument, octave-1, "-x-");
-    cchord(5, Q, instrument, octave-1, "x--");
-    cchord(4, Q, instrument, octave-1, "xxx");
-    cchord(4, I, instrument, octave-1, "--x");
-    cchord(4, I, instrument, octave-1, "-x-");
-    cchord(4, Q, instrument, octave-1, "x--");
+    cchord(4, W, instrument, octave-1, "xxx");
+    //cchord(4, I, instrument, octave-1, "x--");
+    //cchord(4, I, instrument, octave-1, "-x-");
+    //cchord(4, Q, instrument, octave-1, "--x");
+    cchord(5, W, instrument, octave-1, "xxx");
+    //cchord(5, I, instrument, octave-1, "x--");
+    //cchord(5, I, instrument, octave-1, "-x-");
+    //cchord(5, Q, instrument, octave-1, "--x");
+    cchord(6, W, instrument, octave-1, "xxx");
+    //cchord(6, I, instrument, octave-1, "x--");
+    //cchord(6, I, instrument, octave-1, "-x-");
+    //cchord(6, Q, instrument, octave-1, "--x");
+    cchord(1, W, instrument, octave,   "xxx");
+    //cchord(1, I, instrument, octave,   "x--");
+    //cchord(1, I, instrument, octave,   "-x-");
+    //cchord(1, Q, instrument, octave,   "--x");
+    cchord(6, W, instrument, octave-1, "xxx");
+    //cchord(6, I, instrument, octave-1, "--x");
+    //cchord(6, I, instrument, octave-1, "-x-");
+    //cchord(6, Q, instrument, octave-1, "x--");
+    cchord(5, W, instrument, octave-1, "xxx");
+    //cchord(5, I, instrument, octave-1, "--x");
+    //cchord(5, I, instrument, octave-1, "-x-");
+    //cchord(5, Q, instrument, octave-1, "x--");
+    cchord(4, W, instrument, octave-1, "xxx");
+    //cchord(4, I, instrument, octave-1, "--x");
+    //cchord(4, I, instrument, octave-1, "-x-");
+    //cchord(4, Q, instrument, octave-1, "x--");
+    rest(S);
 
     ++riftCnt;
     if(riftCnt == 2) {
@@ -129,8 +130,6 @@ rift2:;
     }
 
 end:;
-    cpower(1, W, instrument, octave);
-
     closeOutput();
 
     return 0;

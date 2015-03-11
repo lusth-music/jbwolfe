@@ -38,7 +38,7 @@ int main() {
 rift1:;
     int i;
     for(i=0; i<2; ++i) {
-      drumkitSnare (1,1,"XXX-----g-------", SX);
+      drumkitSnare (1,1,"xxx-----g-------", SX);
       drumkitSnare (1,1,"xg", SX);
       drumkitSnare (1,1,"xg", SX);
       drumkitSnare (1,1,"xg", SX);
@@ -52,7 +52,8 @@ rift2:;
         drumkitHHOpen  (1, 1, "x---r---r---r---", SX); setLocation(spot);
         drumkitHHClosed(1, 1, "----r---r---r---", SX); setLocation(spot);
         drumkitKick    (1, 1, "----------------", SX);
-        rest(Q);
+        rest(W);
+        rest(W);
         //drumkitHHOpen  (1, 1, "r-------r", SX); setLocation(spot);
         //drumkitHHClosed(1, 1, "G---x---G", SX); setLocation(spot);
         //drumkitKick    (1, 1, "x---x---x", SX);
