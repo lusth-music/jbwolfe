@@ -45,3 +45,7 @@ Thumbs.db
 *.aup
 *_data
 Queen_*
+
+# My experimental class workspace #
+###################################
+experimental/*
