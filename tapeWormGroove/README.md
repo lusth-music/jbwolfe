@@ -1,4 +1,4 @@
-# 50's Style Chord Progression #
+# Tape Worm Groove #
 
 ## Run Instructions ##
 `make mix`

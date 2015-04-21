@@ -1,0 +1,13 @@
+setTempo(300);
+setTime(4,4);
+setKey(C);
+setMode(IONIAN);
+
+intro();
+//verse();
+//refrain();
+//verse();
+//refrain();
+//bridge();
+//verse();
+//refrain();
