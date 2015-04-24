@@ -10,6 +10,9 @@
 *.exe
 *.o
 *.so
+*.mp3
+*.wav
+*.rra
  
 # Packages #
 ############
@@ -44,7 +47,6 @@ Thumbs.db
 ##########################
 *.aup
 *_data
-Queen_*
 
 # My experimental class workspace #
 ###################################

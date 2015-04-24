@@ -1,10 +1,18 @@
-setTempo(300);
+setTempo(200);
 setTime(4,4);
 setKey(C);
 setMode(IONIAN);
 
+preintro();
 intro();
-//verse();
+bridge();
+verse();
+intro();
+bridge();
+verse();
+intro();
+outro();
+
 //refrain();
 //verse();
 //refrain();

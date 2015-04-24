@@ -12,10 +12,12 @@
 char *PROGRAM_NAME = "bass";
 char *PROGRAM_VERSION = "0.01";
 
+void preintro(void);
 void intro(void);
 void verse(void);
 void refrain(void);
 void bridge(void);
+void outro(void);
 
 int instrument;
 int octave = 3;
@@ -37,34 +39,15 @@ int main() {
     return 0;
   }
 
-void intro(void){
+void preintro(void) {
   rest(W);
-  rest(W);
-  rest(W);
-  rest(H);
+}
 
-  rest(W);
-  rest(W);
-  rest(W);
-  rest(H);
-  
-  rest(W);
-  rest(W);
-  rest(W);
-  rest(H);
-  rest(Q);
-  b(3, H, instrument, octave,   "x--", SX);
-  b(3, Q, instrument, octave,   "x--", SX);
-  b(2, H, instrument, octave,   "x--", SX);
-  b(2, Q, instrument, octave,   "x--", SX);
-  b(1, H, instrument, octave,   "x--", SX);
-  b(1, Q, instrument, octave,   "x--", SX);
-  b(0, H, instrument, octave,   "x--", SX);
-  b(0, Q, instrument, octave,   "x--", SX);
-  /*
-  rest(W);
+void intro(void){
+  goto here;
+here:;
   int i;
-  for(i=0; i<2; ++i) {
+  for(i=0; i<4; ++i) {
     //b(1, Q, instrument, octave,   "xxx", SX);
     cpower2(1, I, instrument, octave);
     cpower2(1, I, instrument, octave);
@@ -97,13 +80,64 @@ void intro(void){
     b(5, Q, instrument, octave-1, "--x", SX);
     b(5, Q, instrument, octave-1, "--x", SX);
   }
-  */
+  return;
+}
+
+void bridge(void){
+  rest(H);
+  rest(Q);
+  rest(Q);
+  rest(H);
+  rest(Q);
+  rest(H);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(H);
+  rest(Q);
+  rest(Q);
+  rest(H);
+  rest(Q);
+  rest(Q);
+  rest(H);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  
+  rest(H);
+  return;
 }
 
 void verse(void){
+  cchord(4, W, instrument, octave-1, "xxx");
+  rest(H);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(Q);
+  rest(H);
+  rest(W);
+  cchord(2, W, instrument, octave, "xxx");
+  rest(H);
+  rest(H);
+  rest(I);
+  rest(I);
+  rest(W);
+  rest(H);
+  rest(H);
+  rest(Q);
+  return;
 }
 
 void refrain(void){
+  return;
+}
+
+void outro(void){
   cchord(4, W, instrument, octave-1, "xxx");
   //cchord(4, I, instrument, octave-1, "x--");
   //cchord(4, I, instrument, octave-1, "-x-");
@@ -133,9 +167,7 @@ void refrain(void){
   //cchord(4, I, instrument, octave-1, "-x-");
   //cchord(4, Q, instrument, octave-1, "x--");
   rest(S);
-}
-
-void bridge(void){
+  return;
 }
 
 /* 
